@@ -20,9 +20,39 @@ int main(int argc, char *argv[]) {
 	for(i=0; i<n;i++){
 		test_array[i] = atoi(argv[i+1]);
 	}
-	
+
 	//Your codes here
-	
-	
+	int doicho;
+	for(int i=0;i<=n/2-2;i++)
+	{
+		for(int j =i+1; j<=n/2-1;i++)
+		{
+			if(test_array[j]<=test_array[i])
+			{
+				doicho=test_array[j];
+				test_array[i]=test_array[j];
+				test_array[j]=doicho;
+
+			}
+		}
+
+	}
+	for(int i=n/2;i<=n-2;i++)
+	{
+		for(int j =i+1; j<=n-1;i++)
+		{
+			if(test_array[j]>=test_array[i])
+			{
+				doicho=test_array[j];
+				test_array[i]=test_array[j];
+				test_array[j]=doicho;
+
+			}
+		}
+
+	}
+	for(int k=0;k<=n-1;k++) {
+		printf(" %d",test_array[k]);
+	}
 	return 0;
 }
