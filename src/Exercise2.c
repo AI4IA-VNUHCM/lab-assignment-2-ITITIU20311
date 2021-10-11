@@ -19,7 +19,20 @@ int main(int argc, char *argv[]) {
 	int n = atoi(argv[1]);
 	int result;
 	//Your codes here
-	
+	int pro;
+	pro=1;
+	if (n%2==0)
+	{
+		for(int i=2; i<=n; i=i+2)
+		pro=pro*i;
+
+	}
+	else
+	{
+		for(int i=1; i<=n; i=i+2)
+		pro=pro*i;
+	}
+	result=pro;
 	printf("%d", result);
 	return 0;
 }
