@@ -23,9 +23,9 @@ int main(int argc, char *argv[]) {
 
 	//Your codes here
 	int doicho;
-	for(int i=1;i<=n/2-1;i++)
+	for(int i=0;i<=argc/2-2;i++)
 	{
-		for(int j =i+1; j<=n/2;i++)
+		for(int j =i+1; j<=argc/2-1;j++)
 		{
 			if(test_array[j]<=test_array[i])
 			{
@@ -37,9 +37,9 @@ int main(int argc, char *argv[]) {
 		}
 
 	}
-	for(int i=n/2+1;i<=n-1;i++)
+	for(int i=argc/2;i<=argc-2;i++)
 	{
-		for(int j =i+1; j<=n;i++)
+		for(int j =i+1; j<=argc-1;j++)
 		{
 			if(test_array[j]>=test_array[i])
 			{
@@ -51,8 +51,9 @@ int main(int argc, char *argv[]) {
 		}
 
 	}
-	for(int k=1;k<=n;k++) {
+	for(int k=0;k<=n-1;k++) {
 		printf(" %d",test_array[k]);
 	}
+
 	return 0;
 }
