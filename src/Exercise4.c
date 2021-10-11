@@ -20,6 +20,7 @@ int main(int argc, char *argv[]) {
 	for(i=0; i<n;i++){
 		test_array[i] = atoi(argv[i+1]);
 	}
+	
 	//Your codes here
 	
 	
