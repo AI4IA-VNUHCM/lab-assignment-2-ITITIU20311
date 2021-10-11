@@ -22,9 +22,9 @@ int main(int argc, char *argv[]) {
 	if(distance<=2)
 	result=15000;
 	if(2<distance<=30)
-	result=15000+((distance-2)*500);
+	result=15000+(distance-2)/0.25*2000;
 	if(distance>30)
-	result=15000+((distance-2)*500)+(distance-30)*5000;
+	result=15000+(28/0.25*2000)+(distance-30)*5000;
 	printf("%d", result);
 	return 0;
 }
